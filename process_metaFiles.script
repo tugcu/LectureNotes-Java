@@ -69,7 +69,7 @@ def generate_html(main_data, sub_data):
         # Add standalone slides
         for item in chapter['content']:
             if item.startswith('-'):
-                slide_link = f"{LINKBASE}/WebContent/{chapter['folder']}/{item[1:]} target='_blank'"
+                slide_link = f"{LINKBASE}/WebContent/{chapter['folder']}/{item[1:]}' target='_blank"
                 html_content.append(f"<div><a href='{slide_link}'>{item[1:]}</a></div>")
 
         # Add sections
@@ -82,7 +82,7 @@ def generate_html(main_data, sub_data):
 
                     # Add section slides
                     for slide in section['slides']:
-                        slide_link = f"{LINKBASE}/WebContent/{section['folder']}/{slide} target='_blank'"
+                        slide_link = f"{LINKBASE}/WebContent/{section['folder']}/{slide}' target='_blank"
                         html_content.append(f"<div style='margin-left: 40px;'><a href='{slide_link}'>{slide}</a></div>")
 
     # HTML footer
