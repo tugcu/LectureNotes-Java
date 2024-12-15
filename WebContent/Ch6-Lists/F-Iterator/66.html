@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Iterator usage idiom
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>The standard idiom of using an iterator:
+					<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>Iterator&lt;E&gt; itr = &lt;collection&gt;.iterator();
+while (itr.hasNext()) {
+    &lt;do something with itr.next()&gt;
+}</code></pre>
+					</div><br></li>
+					<li>The following code efficiently removes all Strings with an
+						even number of characters from a linked list:
+					<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>// removes all strings of even length from the list
+public static void removeEvenLength(LinkedList&lt;String&gt; list) {
+    Iterator&lt;String&gt; i = list.iterator();
+    while (i.hasNext()) {
+        String element = i.next();
+        if (element.length() % 2 == 0) {
+            i.remove();
+        }
+    }
+}</code></pre>
+					</div><br></li>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

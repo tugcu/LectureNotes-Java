@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Collection views
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>A map itself is not regarded as a collection.
+						<ul>
+							<li><code class="softdev4u-innerCode softdev4u-blue">Map</code>
+								does not implement <code
+									class="softdev4u-innerCode softdev4u-blue">Collection</code>
+								interface although, in theory, it could be seen as a collection
+								of pairs</li>
+						</ul>
+					</li>
+					<li>Instead, collection views of a map may be obtained:
+						<ul>
+							<li>a <code class="softdev4u-innerCode softdev4u-blue">Set</code>
+								of its keys
+							</li>
+							<li>a <code class="softdev4u-innerCode softdev4u-blue">Collection</code>
+								of its values
+								<ul>
+									<li>Not a <code class="softdev4u-innerCode softdev4u-blue">Set</code>.
+										Why?
+									</li>
+									<div class="softdev4u-codeDiv softdev4u-answer">
+										Because multiple keys can map to the same value
+									</div>
+								</ul></li>
+						</ul>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

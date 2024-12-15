@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Array List Limitations
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>An <code class="softdev4u-innerCode softdev4u-blue">add</code>
+						or <code class="softdev4u-innerCode softdev4u-blue">remove</code>
+						operation on an <code class="softdev4u-innerCode softdev4u-blue">ArrayList</code>
+						that is not at the end of the list will require elements to be
+						shifted.
+						<ul>
+							<li>This can be slow for a large list.</li>
+							<li>What is the worst possible case?</li>
+						</ul>
+				</ul>
+			</div>
+			<img src="images/ArrayListLimitations.png"
+				alt="ArrayList limitations" height=300px /><br><br>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

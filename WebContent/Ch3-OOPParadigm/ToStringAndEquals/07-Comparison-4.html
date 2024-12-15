@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Comparing Objects Using <code class="softdev4u-innerCode softdev4u-blue" style="font-size:42px">equals</code> Method
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li><code class="softdev4u-innerCode softdev4u-blue">equals</code> should not accept a parameter of type Point.
+					<ul>
+						<li>It should be legal to compare <code class="softdev4u-innerCode softdev4u-blue">Points</code> to any other object,
+							e.g.:</li>
+						<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>Point p = new Point(7, 2);
+
+if (p.equals("hello")) {   // false
+	...
+}</code></pre>
+						</div>
+					</ul>
+				</li>
+				<li>The <code class="softdev4u-innerCode softdev4u-blue">equals</code> method, general syntax:
+					<ul>
+						<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>public boolean equals(Object &lt;name&gt;) {
+	&lt;statement(s) that return a boolean value&gt;;
+}</code></pre>
+						</div>
+						<li>The parameter to a proper <code class="softdev4u-innerCode softdev4u-blue">equals</code> method must be of type
+							<code class="softdev4u-innerCode softdev4u-blue">Object</code> (meaning that an object of any type can be passed).</li>
+					</ul>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

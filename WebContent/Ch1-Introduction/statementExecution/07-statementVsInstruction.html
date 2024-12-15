@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				Statement vs. Instruction
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				<!-- SOFTDEV4U PREPAGE -->
+				<ul>
+					<li>Our source code is composed of <span class="softdev4u-green">statements</span>.</li>
+					<ul>
+						<li>Eg: <span class="softdev4u-blue">a=b+c/2;</span></li>
+					</ul>
+					<li>The corresponding machine code is composed of <span class="softdev4u-green">instructions</span>.</li>
+					<ul>
+						<li><div class="softdev4u-codeDiv">
+								<pre class="prettyprint">
+<code>Eg: 1101001010110010 (divide c by 2)
+    0110100100100101 (add it to b)
+    1010110110111011 (put the result in a)</code></pre>
+							</div></li>
+						<li>CPU is capable of executing instructions, not statements. Statements
+							may be too complex.</li>
+						<li>Compiler implements<span style='mso-spacerun:yes'>  </span>each
+							statement using several instructions.</li>
+						<ul>
+							<li>Eg: The statement <span class="softdev4u-blue">&quot;a=b+c/2;&quot;</span> can be implemented as</li>
+							<ul class="softdev4u-blue softdev4u-noneBullet">
+
+								<li>temp1 = c/2</li>
+								<li>a = b + temp1</li>
+
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+
+
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

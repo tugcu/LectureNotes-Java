@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Wrapper example
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>The following list stores int values:</li>
+					<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+list.add(13);
+list.add(47);
+list.add(15);
+list.add(9);
+int sum = 0;
+for (int n : list) {
+	sum += n;
+}
+System.out.println("list = " + list);
+System.out.println("sum = " + sum);</code></pre>
+					</div>
+					<img src="images/WrapperExample.png" alt="Wrapper example" height=100px />
+					<li>Output:
+					<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>list = [13, 47, 15, 9]
+sum = 84</code></pre>
+					</div><br>
+					<li>Though you must say Integer when declaring the list, you
+						can refer to the elements as type int afterward.</li>
+					<li>Java automatically converts between the two using
+						techniques known as boxing and unboxing.</li>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

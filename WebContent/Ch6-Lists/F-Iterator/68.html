@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Iterator is still not perfect
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+<code>// print odd-valued elements, with their indexes
+Iterator&lt;Integer&gt; itr = list.iterator();
+for (int i = 0; itr.hasNext(); i++) {
+	int element = itr.next();
+	if (element % 2 == 1) {
+		System.out.println(i + ": " + element);
+	}
+}</code></pre>
+			</div>
+			<br>
+			<div>
+				<ul>
+					<li>We still had to maintain the index variable <code class="softdev4u-innerCode softdev4u-blue">i</code> so that we
+						could print the index of each element.</li>
+					<li>We can't use the iterator to add or set elements.
+						<ul>
+							<li><span class="softdev4u-blue">The iterator is programmed to crash if the list is
+								modified externally while the iterator is examining it.</span></li>
+						</ul>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

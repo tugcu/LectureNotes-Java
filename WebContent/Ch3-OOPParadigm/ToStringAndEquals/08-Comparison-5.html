@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Another Flawed Version
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>You might think that the following is a valid implementation of the equals method.</li>
+				<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+<code>public boolean equals(Object o) {
+	if (x == o.x && y == o.y) {
+		return true;
+	} else {
+		return false;
+	}
+}</code></pre>
+				</div>
+				<li>However, it does not compile.</li>
+				<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+<code>Point.java:36: cannot find symbol
+symbol  : variable x
+location: class java.lang.Object
+if (x == o.x && y == o.y) {
+          ^</code></pre>
+				</div>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

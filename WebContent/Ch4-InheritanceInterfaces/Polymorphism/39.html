@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Polymorphism &amp; Arrays
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+
+			<div>
+				<ul>
+					<li>You can declare arrays of superclass types, and store
+						objects of any subtype as elements.
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>public class EmployeeMain2 {
+	public static void main(String[] args) {
+		Employee[] employees = {new Lawyer(3), new Secretary(2), 
+				new Marketer(4), new LegalSecretary(1)};
+		for (int i = 0; i &lt; employees.length; i++) {
+			System.out.println("salary = " +
+							   employees[i].getSalary());
+			System.out.println("vacation days = " +
+							   employees[i].getVacationDays());
+			System.out.println();
+		}
+	}
+}</code></pre>
+						</div>
+					</li>
+					<li>OUTPUT:
+						<div class="softdev4u-codeDiv softdev4u-answer">
+							<pre class="prettyprint">
+salary = 65000.0
+vacation days = 21
+
+salary = 50000.0
+vacation days = 10
+
+salary = 60000.0
+vacation days = 18
+
+salary = 55000.0
+vacation days = 10</pre>
+						</div> <br> <br>
+					</li>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

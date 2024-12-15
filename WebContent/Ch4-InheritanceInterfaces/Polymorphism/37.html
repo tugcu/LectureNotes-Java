@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Polymorphism
+
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+
+			<div>
+				<ul>
+					<li><b>Polymorphism:</b> The ability for the same code to be
+						used with several different types of objects and behave
+						differently depending on the type of object used.</li>
+					<li>A reference variable of a type T can legally refer to an
+						object of any subclass of T.
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>Employee person = new Lawyer(3);
+System.out.println(person.getSalary());        // 65000.0
+System.out.println(person.getVacationForm());  // pink</code></pre>
+						</div>
+					</li>
+					<li>You can call any methods from <code
+							class="softdev4u-innerCode softdev4u-blue">Employee</code> on the
+						variable person, but not any methods specific to <code
+							class="softdev4u-innerCode softdev4u-blue">Lawyer</code> (such as
+						<code class="softdev4u-innerCode softdev4u-blue">sue</code>).
+					</li>
+					<li>Once a method is called on the object, it behaves in its
+						normal way (as a <code class="softdev4u-innerCode softdev4u-blue">Lawyer</code>,
+						not as a normal <code class="softdev4u-innerCode softdev4u-blue">Employee</code>).
+					</li>
+				</ul>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

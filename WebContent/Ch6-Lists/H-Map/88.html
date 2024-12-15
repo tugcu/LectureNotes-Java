@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Basic Map usage
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>Maps are declared with two type parameters, one for the
+						keys and one for the values:
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>Map&lt;String, Double&gt; salaryMap = new HashMap&lt;String, Double&gt;();
+salaryMap.put("Stuart", 20000.00);
+salaryMap.put("Marty", 15500.00);
+salaryMap.put("Jenny", 86753.09);
+System.out.println(salaryMap);
+
+// search the map for a name
+if (salaryMap.containsKey("Jenny")) {
+    double salary = salaryMap.get("Jenny");
+    System.out.println("Jenny's salary is $" + salary);
+} else {
+    System.out.println("I don't have a record for Jenny");
+}</code></pre>
+						</div></li>
+					<li>Output:
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>{Jenny=86753.09, Stuart=20000.0, Marty=15500.0}
+Jenny's salary is $86753.09</code></pre>
+						</div></li>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

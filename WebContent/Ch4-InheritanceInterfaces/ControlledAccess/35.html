@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+
+<!-- Color formatting for the table -->
+<style>
+thead {
+	color: green;
+}
+
+tbody {
+	color: blue;
+}
+
+tfoot {
+	color: red;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+</style>
+
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Controlling Access
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div class="softdev4u-columnOneOfTwo">
+
+				<table border="1" style="width: 800px">
+					<colgroup>
+						<col style="width: 30%">
+						<col style="width: 15%">
+						<col style="width: 15%">
+						<col style="width: 20%">
+						<col style="width: 20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Modifier</th>
+							<th style = "text-align: center;">Same class</th>
+							<th style = "text-align: center;">Same package</th>
+							<th style = "text-align: center;">Subclass in other package</th>
+							<th style = "text-align: center;">Unrelated class in other package</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Public</td>
+							<td align="center">Yes</td>
+							<td align="center">Yes</td>
+							<td align="center">Yes</td>
+							<td align="center">Yes</td>
+						</tr>
+
+						<tr>
+							<td>Protected</td>
+							<td align="center">Yes</td>
+							<td align="center">Yes</td>
+							<td align="center">Yes</td>
+							<td align="center">No</td>
+						</tr>
+						<tr>
+							<td>Package-private<br>(no modifier)</td>
+							<td align="center">Yes</td>
+							<td align="center">Yes</td>
+							<td align="center">No</td>
+							<td align="center">No</td>
+						</tr>
+						<tr>
+							<td>Private</td>
+							<td align="center">Yes</td>
+							<td align="center">No</td>
+							<td align="center">No</td>
+							<td align="center">No</td>
+						</tr>
+					<tbody>
+						<!-- We will not use the footer. Keep it just for the sake of the example
+					<tfoot>
+						<tr>
+							<td>Total</td>
+							<td>Total</td>
+							<td>Total</td>
+						</tr>
+					</tfoot>
+					-->
+				</table>
+
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

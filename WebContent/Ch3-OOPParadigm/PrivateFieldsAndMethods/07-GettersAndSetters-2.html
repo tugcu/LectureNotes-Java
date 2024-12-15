@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Getters and Setters
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>Note that the getter and setter methods may be more complex
+					if necessary. For example:
+					<ul>
+						<li>You might want to return the translated version of the
+							stored value (e.g., return "one", "un", "ein", or "bir" for the
+							value 1 depending on the selected language)</li>
+						<li>You might want to set or return x,y, and z coordinates of
+							a point in 3D-space together.</li>
+					</ul>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

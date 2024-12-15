@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			TreeSet vs. HashSet
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>The preceding code can use <code class="softdev4u-innerCode softdev4u-blue">TreeSet</code> instead:
+					<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>Set&lt;String&gt; stooges = new TreeSet&lt;String&gt;();
+...
+System.out.println(stooges);</code></pre>
+					</div></li>
+					<li>Output:
+						<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>[Curly, Larry, Moe, Shemp]</code></pre>
+					</div></li>
+					<li><code class="softdev4u-innerCode softdev4u-blue">TreeSet</code> vs. <code class="softdev4u-innerCode softdev4u-blue">HashSet</code>:
+						<ul>
+							<li>A <code class="softdev4u-innerCode softdev4u-blue">TreeSet</code> stores its elements in the natural
+								alphabetical order.</li>
+							<li><code class="softdev4u-innerCode softdev4u-blue">TreeSet</code> can only be used with elements with an ordering
+								(it can't easily store <code class="softdev4u-innerCode softdev4u-blue">Point</code> objects, for example).</li>
+							<li><code class="softdev4u-innerCode softdev4u-blue">TreeSet</code> is slightly (often not noticeably) slower than
+								<code class="softdev4u-innerCode softdev4u-blue">HashSet</code>.</li>
+						</ul>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

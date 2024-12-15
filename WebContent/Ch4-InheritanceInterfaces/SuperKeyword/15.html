@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Modified
+			<code class="softdev4u-innerCode softdev4u-blue"
+				style="font-size: 42px">Secretary</code>
+			Class
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+
+			<div>
+				<ul>
+					<li>
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>// A class to represent secretaries.
+public class Secretary extends Employee {
+    public Secretary() {
+        super(0);
+    }
+    
+    public void takeDictation(String text) {
+        System.out.println("Taking dictation of text: " + text);
+    }
+}</code></pre>
+						</div>
+					</li>
+					<li>Note that since the <code
+							class="softdev4u-innerCode softdev4u-blue">Secretary</code>
+						doesn't require any parameters to its constructor, the <code
+							class="softdev4u-innerCode softdev4u-blue">LegalSecretary</code>
+						now compiles without a constructor (its default constructor calls
+						the parameterless <code class="softdev4u-innerCode softdev4u-blue">Secretary</code>
+						constructor).
+					</li>
+					<li>This isn't the best solution; it isn't that Secretaries
+						work for 0 years, it's that they don't receive a bonus. How can we
+						fix it?</li>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

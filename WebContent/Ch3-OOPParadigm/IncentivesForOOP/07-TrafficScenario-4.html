@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Example Scenario (via Object Oriented Programming)
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div class="softdev4u-twoColumn">
+				<ul>
+					<li>For the system to work properly, we need to define each
+						class (automobile, truck, bus, motorcycle, bicycle) in detail.</li>
+					<li>However, the vehicles could be organized into several <span
+						class="softdev4u-red">classes</span>: automobiles, buses, and
+						trucks.
+					</li>
+					<li>Yet, we realize that these vehicles have many things in
+						common. Why should we implement the similar components in each
+						class?</li>
+					<li>Instead, if we benefit from <span class="softdev4u-red">abstraction</span>
+						by defining the <span class="softdev4u-red">classes in a
+							hierarchy</span>, we may put the common features higher in the hierarchy
+						so that the descendants lower in the hierarchy <span
+						class="softdev4u-red">inherit</span> the common features from
+						their <span class="softdev4u-red">parents</span>
+				</ul>
+				<img src="images/hierarchy.png" alt="Class Hierarchy" width=70% />
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

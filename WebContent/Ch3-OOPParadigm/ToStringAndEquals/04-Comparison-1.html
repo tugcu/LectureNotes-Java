@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Comparing Objects
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>Since the variable keeps only the reference to the object,
+					comparing two variables with the <code
+						class="softdev4u-innerCode softdev4u-blue">==</code> operator does
+					not compare the contents of the objects but their references.
+				</li>
+				<li>Therefore, for the code segment
+					<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>Course c1, c2;
+c1 = new Course("CMPE160", "Intro to OOP");
+c2 = new Course("CMPE160", "Intro to OOP");
+
+if (c1 == c2)
+	System.out.println("c1 and c2 are the same");
+else
+	System.out.println("c1 and c2 are the different");</code></pre>
+					</div>
+					will show that they are different.
+					<p>Why?
+					<div class="softdev4u-codeDiv softdev4u-answer">
+						Because they are separate objects with different references.
+						<pre class="prettyprint">
+							<img src="images/ObjectCopyExpected.png" alt="Object omparison" height=250 />
+						</pre>
+					</div>
+				</li>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

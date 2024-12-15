@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				<b>PS 14 - Multidimensional Arrays</b>		
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				<ul>
+					<li>We can define multidimensional arrays.</li> 
+					<li>In the two dimensions, multidimensional arrays provide us to think of the memory locations as a table.</li> 
+					<li>Actually it is not possible to keep a table format for memory locations and two dimensional array is an one dimensioanl array, whose elements are sorted.</li> 
+					<li>In the declaration, we specify all dimensions of the multidimensional array. Suppose the following two dimensional array declarations:</li>
+<pre class="prettyprint" >
+<code>int a[3][4];                       /* You can think of array a with 3 rows 
+                                      and 4 columns, but actually 12 consecutive 
+                                      locations are allocated for the elements 
+                                      of a */
+int b[3][5] = {{0,1,2},{3}};       /* It is also possible to initialize the 
+                                      multidimensional arrays, all uninitialized 
+                                      locations are set to zero as in the single 
+                                      dimensional arrays */
+int c[][5] = {{1,2},{3,4}};        /* First dimension is set to 2 in this case */
+int d[][] = {{1,2},{3,4},{5,6}};   /* It is illegal, only the first dimension 
+                                      can be free, i.e., unspecified */
+int e[3][4][5];                    /* It is a three dimensional array, actually 
+                                      it consists of 60 consecutive int-sized
+                                      locations*/</code></pre>
+					<li>If a two dimensional array is to be passed to a function, what is passed is a pointer to an array of rows.</li>
+					<li>The parameter declaration in the function must include the size of dimensions except that of the first one.</li>
+					<li>Suppose the following function declarations and function calls.</li>
+<pre class="prettyprint" >
+<code>void func1(int a[][]){}            /* it is invalid, you need to specify at least 
+                                      the second dimension*/
+void func2(int a[3][4]){}          /* valid */
+void func3(int a[][4]){}           /* valid */
+-------------------------------------------------------
+int a[3][7], b[5][4], c[3][4];
+func3(a);                          /* invalid */
+func3(b);                          /* valid */
+func3(c);                          /* valid */</code></pre>
+				</ul>
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

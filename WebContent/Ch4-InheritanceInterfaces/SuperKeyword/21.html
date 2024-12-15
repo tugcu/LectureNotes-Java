@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Improved
+			<code class="softdev4u-innerCode softdev4u-blue"
+				style="font-size: 42px">Secretary</code>
+			Code
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+
+			<div>
+				<ul>
+					<li>Improved Secretary code</li>
+				</ul>
+			</div>
+
+			<div>
+				<ul>
+					<li>The Secretary can selectively override the
+						getSeniorityBonus method, so that when it runs its getVacationDays
+						method, it will use this new version as part of the computation.
+						<ul>
+							<li>Choosing a method at runtime like this is called dynamic
+								binding.</li>
+						</ul>
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>
+public class Secretary extends Employee {
+	public Secretary(int years) {
+		super(years);
+	}
+	
+	// Secretaries don't get a bonus for their years of service.
+	public int getSeniorityBonus() {
+		return 0;
+	}
+	
+	public void takeDictation(String text) {
+		System.out.println("Taking dictation of text: " + text);
+	}
+}</code></pre>
+						</div>
+					</li>
+					<li>This is exactly why we call <code class="softdev4u-innerCode softdev4u-blue">getSeniorityBonus</code> an “instance method”</li>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

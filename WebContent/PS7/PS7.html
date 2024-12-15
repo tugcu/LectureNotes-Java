@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				Chapter 7 - Repetition Statements
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<!-- SOFTDEV4U PREPAGE -->
+				
+				<b>7.1. While</b>
+				<p>Suppose printing 100 lines with their line numbers:</p>
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+				
+				<br>
+				<p>Compute the average of n numbers entered by the user. You must take the numbers until a negative value is entered:</p>
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+
+				<br>
+				<br>
+				<b>Example:</b> Suppose the user enters the sequence of characters. Write a program that counts the lowercase letters in this sequence until * is met:
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+
+				<br>
+				<br>				
+				<b>Example (read integer char-by-char):</b> You want to take a single integer from the user. Using %d for reading is not allowed: only %c is allowed. Input ends when a non-number character is entered. 
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+				<br>				
+				
+							
+				<b>7.2. For</b>
+				<p>Printing 100 lines with their numbers using <b>for</b> :</p> 
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+
+				<br>
+				<br>
+				<b>Example:</b> Compute the average of n numbers entered by the user where n is also specified by the user at the beginning of the program:
+<pre class="prettyprint" >
+<code>
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+									
+				<br>
+				<br>
+				<b>Example:</b>  Suppose we want to compute the factorial of given number n:
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>				
+				
+				<br>
+				<br>
+				<b>Example:</b>  Write a program that controls whether the number entered by the user is perfect or not. Perfect number is the positive number whose sum of its positive divisors except itself is equal to itself. For example 6 and 28 are perfect numbers (6 = 1 + 2 + 3):
+<pre class="prettyprint" >
+<code>
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>				
+				<br>	
+
+				<b>7.3. Nested Loops</b>	
+				<p>We can have two or more loops inside each other (like nested if' s or switch' s).</p>					
+				<br>					
+				<b>Example:</b>  Draw the isosceles triangle using *, where line number is also specified by the user.
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>	
+	
+				<br>				
+				<br>
+				<b>Example:</b>  Write a program that reads an integer value, and computes the <b>sum of the factorial of each digit</b> . The output will be an <b>integer</b> . For example, assume that the user enters "572" as the input integer. For each digit of the integer, you will compute the factorial.  Then you will compute the sum of these factorials: 5! + 7! + 2! = 120 + 5040 + 2 = 5162. 
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+				<br>				
+
+
+
+				<b>7.4. Break</b>
+				<p>It provides an early exit from for and while just as switch. It causes the innermost enclosing loop or switch to be exited immediately.</p>
+				<b>Example:</b>  Suppose the effect of the gravity on a free falling object. Write a program that displays the height of the object falling from a tower on the screen for every second until it hits the ground. You must also display a message when the object hits the ground (use break to exit the loop when you detect crash). The height of the tower h0 is specified by the user and the height h at time t is: h=h
+				<sub>0</sub> -1/2gt <sup>2</sup>:
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	anykey();
+	return 0;
+}
+</code></pre>
+				<br>
+				
+				
+				
+
+				<b>7.5. Continue</b>	
+ 				<p>It causes the next iteration of the enclosing for, while, do-while to begin. It cannot be used with switch' s. For while and do-while loops, the test part is executed immediately. In for loops, the control passes to the modification step.</p>
+ 				<br>
+				<br>
+				<p>Suppose you have the following loops, and the input of the program is: 5 -4 3 2 -5 8 9 1.</p>
+				<br>
+ 				<br>
+ 				<p>While loop version:</p>
+<pre class="prettyprint" >
+<code>
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	
+	/* sum becomes 28 */
+	printf("sum:%d\n",sum);
+
+	anykey();
+	return 0;
+}
+</code></pre>				
+ 	
+ 				
+				<br>
+ 				<br>
+ 				<p>For loop version:</p>
+<pre class="prettyprint" >
+<code> 	
+#include&lt;stdio.h&gt;
+
+int main(){
+	
+	
+	
+	
+	/* sum becomes 18 */
+	printf("sum:%d\n",sum);
+
+	anykey();
+	return 0;
+}
+</code></pre>				
+				
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

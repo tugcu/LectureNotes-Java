@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Throwing Exceptions
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>Throwing an exception, general syntax:
+					<ul>
+						<li><code class="softdev4u-innerCode softdev4u-blue">throw new &lt;exception type&gt; ();</code><br> 
+							or <code class="softdev4u-innerCode softdev4u-blue">throw new &lt;exception type&gt; ("&lt;message&gt;");</code></li>
+						<li>The <span class="softdev4u-blue">&lt;message&gt;</span>
+							will be shown on the console when the program crashes.</li>
+					</ul>
+				</li><br>
+				<div class="softdev4u-codeDiv">
+					<pre class="prettyprint">
+<code>// Sets this Point's location to be the given (x, y).
+// Throws an exception if newX or newY is negative.
+// Postcondition: x >= 0 && y >= 0
+
+public void setLocation(int newX, int newY) {
+    if (newX < 0 || newY < 0) {
+        throw new IllegalArgumentException();
+    }
+
+    x = newX;
+    y = newY;
+}</code></pre>
+				</div>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

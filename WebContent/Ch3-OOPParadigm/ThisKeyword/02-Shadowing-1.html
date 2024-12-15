@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Variable Shadowing
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li><b>shadowed variable:</b> A field that is "covered up" by a local
+					variable or parameter with the same name.
+					<ul>
+						<li>Normally it is illegal to have two variables in the same
+							scope with the same name, but in this case it is allowed.</li>
+						<li>To avoid shadowing, we named our setLocation parameters <code
+								class="softdev4u-innerCode softdev4u-blue">newX</code> and <code
+								class="softdev4u-innerCode softdev4u-blue">newY</code>:
+						</li>
+						<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+<code>public void setLocation(int newX, int newY) {
+	if (newX < 0 || newY < 0) {
+		throw new IllegalArgumentException();
+	}
+	x = newX;
+	y = newY;
+}</code></pre>
+			</div>
+			<br><br>
+					</ul>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

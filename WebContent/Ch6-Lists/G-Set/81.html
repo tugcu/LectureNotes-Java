@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Typical Set Operations
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>Sometimes it is useful to compare sets:
+						<ul>
+							<li><b>Subset:</b> S1 is a subset of S2 if S2 contains every
+								element from S1.
+								<ul>
+									<li><code class="softdev4u-innerCode softdev4u-blue">containsAll</code> tests for a subset relationship.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>It can be useful to combine sets in the following ways:
+						<ul>
+							<li><b>Union:</b> S1 union S2 contains all elements that are in S1
+								or S2.
+								<ul>
+									<li><code class="softdev4u-innerCode softdev4u-blue">addAll</code> performs set union.</li>
+								</ul>
+							</li>
+							<li><b>Intersection:</b> S1 intersect S2 contains only the elements
+								that are in both S1 and S2.
+								<ul>
+									<li><code class="softdev4u-innerCode softdev4u-blue">retainAll</code> performs set intersection.</li>
+								</ul>
+							</li>
+							<li><b>Difference:</b> S1 difference S2 contains the elements that
+								are in S1 that are not in S2.
+								<ul>
+									<li><code class="softdev4u-innerCode softdev4u-blue">removeAll</code> performs set difference.</li>
+								</ul>
+						</ul>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

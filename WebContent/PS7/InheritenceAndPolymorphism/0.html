@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				Interfaces and Abstract Classes
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<!-- SOFTDEV4U PREPAGE -->
+				
+				<div>
+					<ul>
+						<li>Abstract classes are meant to be inherited from, and when one class inherits from another, 
+						it means that there is a strong relationship between the 2 classes. 
+						For instance, if we have an abstract base class called "Dog", any deriving class should be an 
+						animal that belongs to the Mammal class (like a dog or a monkey). The reason we use the word 
+						"should" is because it is up to the Java developer to ensure that relationship is maintained.
+						</li>
+						<li>With an interface on the other hand, the relationship between the interface itself and the 
+						class implementing the interface is not necessarily strong. 
+						For example, if we have a class called "House", that class could also implement an interface called 
+						"AirConditioning". Having air conditioning not really an essential part of a House 
+						(although some may argue that point), and the relationship is not as strong as, say, the relationship 
+						between a “TownHouse” class and the "House" class or the relationship between an “Apartment” 
+						class that derives from a “House” class.
+						</li>
+						<li>See http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/ 
+						for more detail
+						</li>
+						<li>
+                        <div class="softdev4u-openExampleDiv"
+                            data-softdev4u-exampleName="AbstractClassExample"
+                            data-softdev4u-linkTitle="Open example project"
+                            data-softdev4u-filePath="src/Main.java"
+                            data-softdev4u-lineNumber=4
+                            data-softdev4u-language="Java">
+                        </div>
+                    </li>
+					</ul>
+					<br/>
+
+					<img src="images/objectClass.png" alt="" />
+
+				</div>
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				Chapter 4 - Variables and Constants
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<!-- SOFTDEV4U PREPAGE -->
+				
+				<b>4.1. Variable Declaration</b>
+				<p>Below is an example of various variable declarations. Please note that you are only responsible for
+				 </p>
+				<pre><font color="blue">int</font>, <font color="blue">float</font>, <font color="blue">double</font>, <font color="blue">char</font>
+				</pre>
+				<p>data types. Other types are used just for reference.<p>
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){
+    int num1 = 0, num2, sum;
+    float Num1;                
+    long double tax = 4.3;
+    double second;
+    long factorial = 40L;
+    char myName = 'a', t;
+    char first = '\n';
+    double no1 = 3.4, no2 = 5.6, no3, no4 = -132;
+    float last;
+
+    scanf("%d%lf%ld%c",&amp;num1,&amp;second,&amp;factorial,&amp;first);
+    scanf("%f",&amp;Num1);
+    printf("Different numbers: %d\t%ld\t%Lf\n",num2,factorial,tax);
+    printf("More than this, %c %c",myName,first);
+
+    return 0;
+}				
+ </code></pre>		
+				
+				<b>4.2. Rules for Variable Names</b>
+				
+				<p>These rules are also valid for identifier names, e.g., variable names, function names, symbolic constant names, etc.</p>
+				
+				<ol>
+				<li>They must consist of <b>letters and digits</b> (The underscore character '_' is considered as a letter).</li>
+				<li>The names of variables must <b>begin with letters</b>. It is also possible to begin with the underscore character, but it is not recommended since library routines often use such names.</li>
+				<li>Do not forget that C is a case sensitive language, i.e., <b>x and X are different</b>.</li>
+				<li>At least first 31 characters of an internal name are significant (it depends on a compiler).</li>
+				<li>Keywords like int, main, float, return, long, unsigned, const, if, etc. are reserved and can not be used as identifier names.</li>							
+				</ol>
+				
+				<p>The language does not require that variable names are meaningful, but it is STRONGLY recommended that you use meaningful names.</p>
+				
+				<p>Here are some <b>valid</b> identifier names:</p>
+				
+				<pre>My_Name8
+number_
+_number
+CMPE
+fdjkfhdg34ffs
+x9875424</pre>
+
+				<p>And some <b>invalid</b> identifier names are listed as follows:</p>
+				
+				<pre>8Name_4
+4563
+number+
+data\%
+return</pre>
+
+				<b>4.3. Constants</b>
+				
+				<p>They are identifiers defined as constants. You are not allowed to change their values during the execution of the program. For example:</p>
+				
+				<pre><font color="black" style="background-color:lightgreen">#define PI 3.14</font>
+</pre>
+				
+				
+
+				<p>Note that, by convention, only <b>CAPITAL LETTERS</b> and <b>_</b> character are used within constant names.</p>
+				
+				<br/>
+				<br/>
+				
+				<b>Exercise:</b>
+				<p>Write a program which reads the radius of a circle and then calculates circumference and area (utilizing a defined PI)</p>
+				
+				<br/>
+				<br/>
+
+				<p>
+For other constant types such as use of 
+<b>const</b>
+ directive or 
+ <b>enum</b>
+  data type, please refer to 
+  <b>"advanced C topics"</b>
+   section.
+				</p>
+				
+				<b>4.4. Assignment and Type Conversions</b>
+					
+					<p>
+				When a narrower type is assigned to a wider one, the value is assigned without losing information. When a wider type is assigned to a narrower one, you may lose some information.
+</p>
+					<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){
+    int a;
+	float b;
+	char c;
+	a=3.14;  /* a = 3 */
+	b=8;     /* b = 8.0 */
+	c='0';   /* c = '0' */
+	printf("a:%d b:%f c:%c\n",a,b,c);
+
+	b=9.2;   /* b = 9.2 */
+	printf("b:%f\n",b);
+	
+	a=b;     /* a = 9 */
+	printf("a:%d\n",a);
+	
+	b=a;     /* b = 9.0 */
+	printf("b:%f\n",b);
+
+	a=c;     /* a = 48, since ASCII code of '0' is 48 */
+	printf("a:%d\n",a);
+
+	b=c;     /* b = 48.0 */
+	printf("b:%f\n",b);
+	
+	c=49;    /* c = '1', since ASCII code of '1' is 49 */
+	printf("c:%c\n",c);
+
+	c=50.2;  /* c = '2' */
+	printf("c:%c\n",c);
+	
+	return 0;
+}				
+ </code></pre>				
+					
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Towers of Hanoi
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li>A nice demo available at <br> <a
+						href="http://thinks.com/java/hanoi/hanoi.htm">http://thinks.com/java/hanoi/hanoi.htm</a>
+					</li>
+					<li>Idea:
+						<ul>
+							<li>Move tower of height N-1 from SRC to AUX</li>
+							<li>Move largest disk to DEST</li>
+							<li>Move tower of height N-1 from AUX to DEST</li>
+						</ul>
+					</li>
+					<div class="softdev4u-openExampleDiv"
+						data-softdev4u-exampleName="TowersOfHanoi"
+						data-softdev4u-linkTitle="Open 'Towers of Hanoi' in Eclipse"
+						data-softdev4u-filePath="src/Hanoi.java"
+						data-softdev4u-lineNumber=19
+						data-softdev4u-language="Java">
+					</div>
+					<br>
+					<br>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

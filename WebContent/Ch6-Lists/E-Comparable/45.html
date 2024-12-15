@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Uses of natural ordering
+
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+
+			<div>
+				<ul>
+					<li>An <code class="softdev4u-innerCode softdev4u-blue">ArrayList</code>
+						of orderable values can be sorted using the <code
+							class="softdev4u-innerCode softdev4u-blue">Collections.sort</code>
+						method:
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>ArrayList&lt;String&gt; words = new ArrayList&lt;String&gt;();
+words.add("four");
+words.add("score");
+words.add("and");
+words.add("seven");
+words.add("years");
+words.add("ago");
+
+// show list before and after sorting
+System.out.println("before sort, words = " + words);
+Collections.sort(words);
+System.out.println("after sort, words = " + words);
+								</code></pre>
+						</div></li>
+					<li>Output:
+						<div class="softdev4u-codeDiv">
+							<pre class="prettyprint">
+<code>before sort, words = [four, score, and, seven, years, ago]
+after sort, words = [ago, and, four, score, seven, years]</code></pre>
+						</div> <br>
+					<br>
+					</li>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

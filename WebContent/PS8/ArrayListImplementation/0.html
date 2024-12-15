@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				<code>ArrayList</code> Implementation 
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<!-- SOFTDEV4U PREPAGE -->
+				
+				<div>
+					<ul>
+						<li>
+							Well, the source code is here: http://hg.openjdk.java.net/jdk7/jdk7/jdk/file/tip/src/share/classes/java/util/ArrayList.java
+						</li>
+						<li>
+							Here is the brief info from the documentation:
+							<ul>
+								<li>
+									Resizable-array implementation of the <code>List</code> interface. 
+									Implements all optional list operations, and permits all elements, including <code>null</code>. 
+									In addition to implementing the <code>List</code> interface, this class provides methods to manipulate 
+									the size of the array that is used internally to store the list.
+								</li>
+								<li>
+									The <code>size</code>, <code>isEmpty</code>, <code>get</code>, <code>set</code>, <code>iterator</code>, and <code>listIterator</code>
+									operations run in constant time. The <code>add</code> operation runs in <i>amortized constant time</i>, that is, 
+									adding n elements requires O(n) time. All of the other operations run in linear time (roughly speaking). 
+									The constant factor is low compared to that for the <code>LinkedList</code> implementation.
+								</li>
+								<li>
+									Each <code>ArrayList</code> instance has a capacity. The capacity is the size of the array used to store the elements in the list. 
+									It is always at least as large as the list size. As elements are added to an ArrayList, its capacity grows automatically. 
+									The details of the growth policy are not specified beyond the fact that adding an element has constant amortized time cost.
+								</li>
+							</ul>
+						</li>
+						</br>
+						<li>
+	                        <div class="softdev4u-openExampleDiv"
+	                            data-softdev4u-exampleName=MyArrayList
+	                            data-softdev4u-linkTitle="Our ArrayList Implementation"
+	                            data-softdev4u-filePath="src/MyArrayList.java"
+	                            data-softdev4u-lineNumber=4
+	                            data-softdev4u-language="Java">
+	                        </div>
+	                    </li>
+					</ul>
+
+				</div>
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

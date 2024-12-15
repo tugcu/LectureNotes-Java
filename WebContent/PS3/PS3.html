@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				Chapter 3 - Data Types
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<!-- SOFTDEV4U PREPAGE -->
+				
+				<p><b>3.1. Integers</b></p>
+				<p>We have already studied integer data type (int).</p>
+				<p>For integer type modifiers (short, long, signed, unsigned) please refer to <b>"Advanced Topics in C"</b> section.</p>
+				
+				<p><b>3.2. Floating point numbers</b></p>				
+				<p>Floating point numbers are the real numbers, i.e., the numbers with fractional parts (e.g.: 1.54). 
+				Just like integers being input and output using <i>%d</i>, floats are input and output using 
+				<i>%f</i>.</p>
+				
+				<br/>
+				<br/>
+				<p><b>Exercise:</b></p>
+				<p>Write a program that reads two floats from the user and calculates the sum.</p>
+				<br/>
+				<br/>
+				
+				
+				<p>Another method for declaring a real number is using <b>double</b>, which can 
+				store real numbers with higher precision. <br/> <i>%lf</i>  is used for reading and writing doubles.</p>
+				
+				<br/>
+				<br/>
+				<p><b>Exercise:</b></p>
+				<p>Write a program that reads two doubles from the user and calculates the sum.</p>
+				<br/>
+				<br/>
+				
+				<p><b>3.3. Characters</b></p>	
+				
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){
+	char ch='b';
+	printf("%c\n",ch);
+	
+	return 0;
+}
+</code></pre>
+				
+				<br/>
+				<br/>
+				<p><b>Exercise:</b></p>
+				<p>Write a program that reads a character variable from the user, then prints the character read and its ASCII code (integer value corresponding to that character) on screen.</p>
+				<br/>
+				<br/>
+				
+				
+				
+				<p>
+				
+				</p>
+				
+				
+				<p></p>
+				<p></p>
+				<p></p>
+				<br/>
+				<br/>
+				<br/>
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

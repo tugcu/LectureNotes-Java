@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				<b>PS 15 - Struct</b>		
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				<ul>
+					We used arrays to define sets of multiple variables 
+					of the same type.
+					<br/><br/> 
+					Similarly, we use structs to define
+					sets of variables of different types.
+					<br/><br/> 
+					Structs are defined before the main function. 
+					A simple struct definition is: 
+					 
+<pre class="prettyprint" >
+<code>
+struct Student{
+	int id;
+	int midterm1Grade;
+	int midterm2Grade;
+	int finalGrade;
+	char letterGrade;
+};
+</code>
+</pre>
+
+Here, <b>Student</b> becomes a bundle of variables. Just like we create 
+variables of different types in the program, we can create variables 
+of a defined struct type like: 
+
+ 						 
+<pre class="prettyprint" >
+<code>
+struct Student s1;
+</code>
+</pre>
+
+Elements of a struct variable are accessed 
+with <b>.</b> (dot) operator and used just like 
+any other variable. i.e: 
+<pre class="prettyprint" >
+<code>
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;teachingcodes.h&gt;
+
+struct Student{
+	int id;
+	int midterm1Grade;
+	int midterm2Grade;
+	int finalGrade;
+	float overallGradeOverFour;
+	char letterGrade;
+};
+
+int main() {
+	TC_BEGIN;
+
+	//create two students here
+	struct Student s1;
+	struct Student s2;
+
+	//set the id's of them
+	s1.id = 2014800042;
+	s2.id = 2011700321;
+
+	//read their grades here
+	scanf("%d", &s1.midterm1Grade);
+	scanf("%d", &s2.midterm1Grade);
+	scanf("%d", &s1.midterm2Grade);
+	scanf("%d", &s2.midterm2Grade);
+	scanf("%d", &s1.finalGrade);
+	scanf("%d", &s2.finalGrade);
+
+	//calculate their overall grades (over 4.0)
+	s1.overallGradeOverFour = (s1.midterm1Grade*0.3f
+			+ s1.midterm2Grade*0.3f
+			+ s1.finalGrade*0.4f)/25.0f;
+	s2.overallGradeOverFour = (s2.midterm1Grade*0.3f
+				+ s2.midterm2Grade*0.3f
+				+ s2.finalGrade*0.4f)/25.0f;
+
+	//calculate their letter grades
+	s1.letterGrade = 'A'+(4-(int)s1.overallGradeOverFour);
+	s2.letterGrade = 'A'+(4-(int)s2.overallGradeOverFour);
+
+	//print the results
+	printf("%d: %.2f (%c)\n",s1.id, s1.overallGradeOverFour, s1.letterGrade);
+	printf("%d: %.2f (%c)\n",s2.id, s2.overallGradeOverFour, s2.letterGrade);
+
+	TC_END;
+	return 0;
+}
+
+
+</code>
+</pre>
+
+Elements of a struct can be another struct, or an array. 
+Arrays of structs can also be created. For example: 
+
+					 
+<pre class="prettyprint" >
+<code>
+
+
+struct Class
+{
+	int classID;
+	int studentCount;
+	struct Student students[100];
+	struct Student theBestStudent;
+	float curveGrade;
+};
+
+</code>
+</pre>
+
+An instance of a struct can be assigned to another one. For example:   
+						 
+<pre class="prettyprint" >
+<code>
+
+struct Class c;
+struct Student theBestStudent;
+// .......
+// .......
+theBestStudent = c.students[2];
+//...........
+//............
+struct Student s2;
+struct Student s3;
+//...........
+//............
+s3 = s2;
+
+
+</code>
+</pre>			
+
+When such an assignment is done, all the values of the elements of s2 is copied
+into the corresponding elements of s3. 
+
+<br/><br/><br/>
+<b>Example:</b><br/>
+Define a struct named <b>Person</b> which has a name (assume char)
+and age. Then
+define a struct named <b>House</b> which contains up to 9 persons, and a house name
+(assume char). Then
+define a struct named <b>Block</b> which contains exactly 10 houses. 
+<br/>Then write a program which reads 3 blocks from the user, and prints
+the oldest person and his house to the screen like: "t of house b". 
+
+				<div
+					class="softdev4u-openExampleDiv" 
+					data-softdev4u-exampleName="PS-Week15-Example1" 
+					data-softdev4u-linkTitle="press to open example project" 
+					data-softdev4u-filePath="src/main.c" 
+					data-softdev4u-lineNumber=1
+					data-softdev4u-language="C">
+				</div>
+<br/><br/><br/>
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

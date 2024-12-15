@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				<code>ArrayList</code> vs <code>LinkedList</code>
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<!-- SOFTDEV4U PREPAGE -->
+				
+				<div>
+					<ul>
+						<li>
+							The following is the most useful table I have ever seen:
+	                    </li>
+						<li>
+							For LinkedList<E>
+							<ul>
+								<li>
+									<code>get(int index)</code> is O(n)
+								</li>
+								<li>
+									<code>add(E element)</code> is O(1)
+								</li>
+								<li>
+									<code>add(int index, E element)</code> is O(n)
+								</li>
+								<li>
+									<code>remove(int index)</code> is O(n)
+								</li>
+								<li>
+									<code>Iterator.remove()</code> is O(1) <--- main benefit of LinkedList<E>
+								</li>
+								<li>
+									<code>ListIterator.add(E element)</code> is O(1) <--- main benefit of LinkedList<E>
+								</li>
+							</ul>
+						</li>
+						<li>
+							For ArrayList<E>
+							<ul>
+								<li>
+									<code>get(int index)</code> is O(1) <--- main benefit of ArrayList<E>
+								</li>
+								<li>
+									<code>add(E element)</code> is O(1) amortized, but O(n) worst-case since the array must be resized and copied
+								</li>
+								<li>
+									<code>add(int index, E element)</code> is O(n - index) amortized, but O(n) worst-case (as above)
+								</li>
+								<li>
+									<code>remove(int index)</code> is O(n - index) (i.e. removing last is O(1))
+								</li>
+								<li>
+									<code>Iterator.remove()</code> is O(n - index)
+								</li>
+								<li>
+									<code>ListIterator.add(E element)</code> is O(n - index)
+								</li>
+							</ul>
+						</li>
+	                    <li>
+	                    	resource: http://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist	
+	                    </li>
+	                    
+					</ul>
+
+				</div>
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

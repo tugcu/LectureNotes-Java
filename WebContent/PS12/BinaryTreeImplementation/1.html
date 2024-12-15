@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				<code>BinaryTree<T></code> Class 
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+			
+			<ul>
+				<li>
+					Just like linked lists, binary trees can be traversed recursively. It is almost always sufficient to 
+					store just the root of the tree. 
+				</li>
+				<li>
+					Many operations can be implemented recursively. Think about the infix traversal of a binary tree: For each node,
+					the left child and its descendant are processed first. This is followed by the node itself and the right child 
+					and its descendant are processed at the end. So, why not to implement a method that takes a <code>Node</code>
+					as the parameter and call it recursively?
+				</li>
+			</ul>
+			
+			<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+				
+<code>public class BinaryTree&lt;T&gt; {
+	Node&lt;T&gt; root;
+	
+	public void infixTraverse() {
+		infixTraverse(root);
+	}
+	
+	private void infixTraverse(Node&lt;T&gt; root) {
+		if (root != null) {
+			System.out.println(root.data);
+			infixTraverse(root.leftChild);
+			infixTraverse(root.rightChild);
+		}
+	}
+}</code></pre>
+			</div>
+			
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Why Use Encapsulation?
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>Encapsulation helps provide a clean layer of abstraction
+					between an object and its clients.</li>
+				<li>Encapsulation protects an object from unwanted access by
+					client code.
+					<ul>
+						<li>For example, assume we write a program to manage users'
+							bank accounts. We don't want a malicious client program to be
+							able to arbitrarily change a BankAccount object's balance.</li>
+					</ul>
+				</li>
+				<li>Encapsulation allows the class author to change the
+					internal representation later if necessary.
+					<ul>
+						<li>For example, if so desired, the Point class could be
+							rewritten to use polar coordinates (a radius r and an angle θ
+							from the origin), but the external view could remain the same.
+							So, the client code is not affected by the implementation change
+							in the Point class.<br>
+							<img src="images/PolarCoordinates.png" alt="Polar coordinates" height=150 />
+							</li>
+					</ul> <!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

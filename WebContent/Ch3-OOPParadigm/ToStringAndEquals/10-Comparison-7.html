@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Comparing Different Types
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>Our <code class="softdev4u-innerCode softdev4u-blue">equals</code> code still is not complete.
+					<ul>
+						<li>When we compare Point objects to any other type of objects,</li> 
+					</ul></li>
+				<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+<code>Point p = new Point(7, 2);
+
+if (p.equals("hello")) {   // false
+	...
+}</code></pre>
+				</div>
+				<li>Currently the code crashes with the following exception:</li>
+				<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+<code>Exception in thread "main"
+java.lang.ClassCastException: java.lang.String
+		at Point.equals(Point.java:25)
+		at PointMain.main(PointMain.java:25)</code></pre>
+				</div>
+				<li>The culprit is the following line that contains the type-cast:</li>
+				<div class="softdev4u-codeDiv">
+				<pre class="prettyprint">
+<code>public boolean equals(Object o) {
+	Point other = (Point) o;
+	...</code></pre>
+				</div>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

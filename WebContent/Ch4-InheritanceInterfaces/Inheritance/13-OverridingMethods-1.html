@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Overriding Methods
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li><b>Override:</b> To write a new version of a method in a
+					subclass that replaces the one inherited from the superclass.</li>
+				<li>The new method must have the same signature as the parent's
+					method, but can have a different body</li>
+				<li>The type of the object executing the method determines
+					which version of the method is invoked
+					<ul>
+						<li>There is no special syntax for overriding. To override a
+							superclass method, just write a new version of it in the
+							subclass. This will replace the inherited version.</li>
+					</ul>
+				</li>
+				<li>Example:
+					<div class="softdev4u-codeDiv">
+						<pre class="prettyprint">
+<code>public class Lawyer extends Employee {
+
+	// overrides getVacationForm method in Employee class
+	public String getVacationForm() {
+		return "pink";
+	}
+	...
+}</code></pre>
+					</div>
+				</li>
+				<li>Exercise: Complete the <code class="softdev4u-innerCode softdev4u-blue">Lawyer</code> class.</li>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

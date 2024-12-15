@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			A New ADT: Map
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li><b>Map:</b> An unordered collection that associates a
+						collection of element values with a set of keys so that elements
+						can be found very quickly
+						<ul>
+							<li>Each key can appear at most once (no duplicate keys)</li>
+							<li>A key maps to at most one value</li>
+							<li>the main operations:
+								<ul>
+									<li><code class="softdev4u-innerCode softdev4u-blue">put(key, value)</code><br> 
+											"Map this key to that value."</li>
+									<li><code class="softdev4u-innerCode softdev4u-blue">get(key)</code><br>
+											"What value, if any, does this key map to?"</li>
+								</ul>
+							</li>
+							<li>Maps are represented in Java by the <code class="softdev4u-innerCode softdev4u-blue">Map&lt;K, V&gt;</code>
+								interface.
+								<ul>
+									<li>Two implementations: <code class="softdev4u-innerCode softdev4u-blue">HashMap</code> 
+									and <code class="softdev4u-innerCode softdev4u-blue">TreeMap</code></li>
+								</ul>
+						</ul>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Instance Methods for the Course Class
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>Static methods belong to the class definition, not to the
+					individual objects.
+					<ul>
+						<li>If it is expected to operate on a specific object, that
+							object should be passed as a parameter to the static method
+							(beats the purpose of having objects)</li>
+						<li>A static method can be invoked:
+							<ul>
+								<li>within a method of that class, directly by its name
+									(e.g., <span class="softdev4u-blue"
+									style="font-family: monospace">sort(myArray)</span>)
+								</li>
+								<li>from outside the class, through the name of that class,
+									not the object variable's name (e.g., <span
+									class="softdev4u-blue" style="font-family: monospace">Utils.sort(myArray)</span>
+									or the familiar method call <span class="softdev4u-blue"
+									style="font-family: monospace">Math.pow(x,y)</span>)
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Instance methods, on the other hand, are specific to the
+					individual objects.
+					<ul>
+						<li>No need to mention the object name as a parameter since
+							it is obvious.</li>
+						<li>An instance method can be invoked:
+							<ul>
+								<li>within a method of that class, directly by its name
+									(e.g., <span class="softdev4u-blue"
+									style="font-family: monospace">registerCourse(courseName)</span>)
+								</li>
+								<li>from outside the class, through the name of the object (e.g., <span
+									class="softdev4u-blue" style="font-family: monospace">student.registerCourse(courseName)</span>)
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Private Fields and Methods
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>To restrict access to a field or method of a class from
+					other classes, you should define it as <span class="softdev4u-blue">private</span>.
+				</li>
+				<li>A private field or method is visible only within that
+					class. Therefore, objects of other classes cannot read or modify
+					the values of private fields, or invoke private methods.</li>
+				<li>The intuition behind making a field private is to ensure
+					that the client code does not perform an uncontrolled access that
+					may cause problems later. For example, you might want to ensure
+					that the value of the private field cannot be set to a negative
+					value by mistake.</li>
+				<li>Similarly, you may want to ensure that a method is not
+					invoked from other classes since it may cause unexpected side
+					effects.</li>
+				<li><i>Information hiding</i> in this manner is an important
+					issue in software engineering as well as security.</li>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

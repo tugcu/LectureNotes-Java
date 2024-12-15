@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Separating Behaviour
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>Why not just have a 22 page Lawyer manual, a 21-page
+					Secretary manual, a 23-page Marketer manual, etc.?</li>
+				<li>Some advantages of the separate manuals:
+					<ul>
+						<li>maintenance: If a common rule changes, we'll need to
+							update only the common manual.</li>
+						<li>locality: A person can look at the lawyer manual and
+							quickly discover all rules that are specific to lawyers.</li>
+					</ul>
+				</li>
+				<li>Some key ideas from this example:
+					<ul>
+						<li>It's useful to be able to describe general rules that
+							will apply to many groups (the 20-page manual).</li>
+						<li>It's also useful for a group to specify a smaller set of
+							rules for itself, including being able to replace rules from the
+							overall set.</li>
+					</ul>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

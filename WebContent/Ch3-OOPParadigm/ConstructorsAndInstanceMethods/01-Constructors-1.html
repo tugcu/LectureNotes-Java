@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Constructors
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>An object may require some initialization operations when
+					it is created
+					<ul>
+						<li>E.g.: When a new course is created,
+							<ul>
+								<li>you need to assign it a name, an instructor, an
+									assistant</li>
+								<li>you may also need to make modifications in other
+									tables/objects (such as reserving a classroom, scheduling,
+									etc.)</li>
+							</ul>
+						</li>
+						<li>Constructor name must be the same as the class name</li>
+						<li>No return type
+							<ul>
+								<li>Anyways, it is not supposed to return anything</li>
+							</ul>
+						</li>
+						<li>Executed automatically as soon as the object is created
+							(using new command)
+							<ul>
+								<li>It is not executed when a variable of that class type
+									is defined</li>
+							</ul>
+						</li>
+						<li>All classes need at least one constructor
+							<ul>
+								<li>If you don’t provide any constructor the default
+									constructor is assumed
+									<div class="softdev4u-codeDiv">
+										<pre class="prettyprint">
+<code>CLASSNAME() {
+
+}</code></pre>
+									</div>
+								</li>
+							</ul>
+					</ul>
+			</ul>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

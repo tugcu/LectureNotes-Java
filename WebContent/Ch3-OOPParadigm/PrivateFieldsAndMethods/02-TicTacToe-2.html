@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SoftDev4U</title>
+<link href="../../sd4uBundle/google-code-prettify/prettify.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css"
+	type="text/css" rel="stylesheet" />
+<link href="../../sd4uBundle/css/softdev4u.css" type="text/css"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Designing the TicTacToe Game
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<ul>
+				<li>From the object-oriented point of view:
+					<ol>
+						<li>The game is actually an interaction between two objects:
+							player<sub>1</sub> and player <sub>2</sub>.
+						</li>
+						<li>These two objects make use of another object: a gameboard
+							composed of 9 squares.</li>
+						<li>An orchestrater that initiates the game, keeps track of
+							whose turn it is, whether the game is over, who the winner is,
+							etc.</li>
+					</ol>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li>So, we have three different types of objects, i.e., three
+					different classes:
+					<ol>
+						<li><span class="softdev4u-blue">Player</span> class: Set the respective player object with its name and mark.</li>
+						<li><span class="softdev4u-blue">Board</span> class: Manage the GUI (all graphics operations, mouse clicking, displaying info, etc.) </li>
+						<li><span class="softdev4u-blue">Game</span> class: Initialize the board and the players, run the game through several rounds, check if the game is over or not, etc. </li>
+					</ol></li>
+				<li>We also need another class, <span class="softdev4u-blue">Main</span>, to trigger the execution of the whole project, i.e., provide the main method.</li>
+				<li>We will organize related classes in separate packages, <span class="softdev4u-blue">framework</span> and <span class="softdev4u-blue">runnable</span>.
+			</ul>
+			<div class="softdev4u-openExampleDiv"
+					data-softdev4u-exampleName="TicTacToe-Stage1_Original-v2"
+					data-softdev4u-linkTitle="Open 'TicTacToe (Stage1: Original)' in Eclipse"
+					data-softdev4u-filePath="src/runnable/Main.java"
+					data-softdev4u-lineNumber=16
+					data-softdev4u-language="Java">
+				</div> <br><br>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

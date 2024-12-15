@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SoftDev4U</title>
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/google-code-prettify/prettify.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="../../sd4uBundle/css/softdev4u.css" />
+<script type="text/javascript"
+	src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+<script type="text/javascript"
+	src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+<script
+	src='../../sd4uBundle/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script>
+	$(function() {
+		prettyPrint();
+		softdev4u_init();
+	});
+</script>
+</head>
+<body onresize="softdev4u_resize()" onload="prettyPrint()">
+	<div class="softdev4u-page">
+		<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+			Iterators and Maps
+			<!-- SOFTDEV4U POSTTITLE -->
+		</p>
+		<div class="softdev4u-pageContent">
+			<!-- SOFTDEV4U PREPAGE -->
+			<div>
+				<ul>
+					<li><code class="softdev4u-innerCode softdev4u-blue">Map</code>
+						has no <code class="softdev4u-innerCode softdev4u-blue">iterator</code>
+						method; you can't get an <code
+							class="softdev4u-innerCode softdev4u-blue">Iterator</code>
+						directly</li>
+					<li>You must first call either:
+						<ul>
+							<li><code class="softdev4u-innerCode softdev4u-blue">keySet()</code>
+								returns a <code class="softdev4u-innerCode softdev4u-blue">Set</code>
+								of all the keys in this Map</li>
+							<li><code class="softdev4u-innerCode softdev4u-blue">values()</code>
+								returns a <code class="softdev4u-innerCode softdev4u-blue">Collection</code>
+								of all the values in this <code
+									class="softdev4u-innerCode softdev4u-blue">Map</code></li>
+						</ul>
+					</li>
+					<li>Then, call <code
+							class="softdev4u-innerCode softdev4u-blue">iterator()</code> on
+						the key set or value collection.
+						<ul>
+							<li>Examples:
+								<div class="softdev4u-codeDiv">
+									<pre class="prettyprint">
+<code>Iterator&lt;String&gt; keyItr = grades.keySet().iterator(); 
+Iterator&lt;String&gt; elementItr = grades.values().iterator();</code></pre>
+								</div>
+							</li>
+							<li>You can also use the enhanced for loop over these
+								collections:
+								<div class="softdev4u-codeDiv">
+									<pre class="prettyprint">
+<code>for (int ssn : ssnMap.values()) {
+	System.out.println("Social security #: " + ssn);
+}</code></pre>
+								</div>
+							</li>
+						</ul>
+				</ul>
+			</div>
+			<!-- SOFTDEV4U POSTPAGE -->
+		</div>
+	</div>
+</body>
+</html>

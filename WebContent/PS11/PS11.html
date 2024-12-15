@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				<b>Chapter 11 - Arrays</b>		
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<p>Suppose we want to take N integers, x<sub>i</sub>, from the user and </p> 
+				
+				<p>We want to compute the average of these numbers, where </p>
+				<p><img src="images/avg.png" alt="Average"> </p>
+				
+				
+<!-- First Example -->
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+#define N 5
+ 
+int main(){
+    float avg = 0,i;
+    int no;
+    for (i = 0; i &lt; N; i++){
+        scanf("%d",&amp;no);
+        avg += no;
+    }
+    avg /= N;
+    printf("average:%f\n",avg);
+    
+    return 0;
+}
+ </code></pre> 	
+<div
+	class="softdev4u-openExampleDiv" 
+	data-softdev4u-exampleName="PS-Week11-Example1-Average" 
+	data-softdev4u-linkTitle="press to open example Average" 
+	data-softdev4u-filePath="src/Average.c" 
+	data-softdev4u-lineNumber=1
+	data-softdev4u-language="C">
+</div> 
+<br>
+
+
+
+<p>We want to compute the variance of the numbers x<sub>i</sub>, where variance is </p> 
+<p><img src="images/var.png" alt="Average"> </p>
+<p>For this time, we need to keep x<sub>i</sub> values since first we need to compute the average value, then use this value in the variance computation.</p>
+<ul>
+  <li>One way is to keep each number in distinc variables. <br>For example if N=100, then we need to declare 100 variables. But it is <b>not feasible</b>.</li>
+  <li>The alternative way is to group these variables under the same name, where each of them has an unique index.</li>
+</ul> 
+<br>
+<p>- An array is a group of memory locations. <br>- These locations are related by the fact that they have all the same name and same type. <br>- To refer (access) to a particular location, i.e., an element within the array, specify the name of the array and the position number (index) of the variable in square brackets. </p>
+
+
+<!-- Second Example -->	
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){			
+
+
+	return 0;
+}
+ </code></pre>		
+<div
+	class="softdev4u-openExampleDiv" 
+	data-softdev4u-exampleName="PS-Week11-Example2-Variance" 
+	data-softdev4u-linkTitle="press to open example Variance" 
+	data-softdev4u-filePath="src/Variance.c" 
+	data-softdev4u-lineNumber=1
+	data-softdev4u-language="C">
+</div> 
+<br>
+<p>- We must declare arrays before using them.
+<br>
+<pre class="prettyprint" >
+<code>
+int X[100];
+float Y[90], Array[10];
+ </code></pre>	
+
+<ul>
+	<li><b>float Y[90];</b> tells the compiler to reserve 90 elements for float array Y, i.e., to allocate 90 memory locations, each of which is capable of storing a float value.</li>
+  	<li>Arrays (their elements) occupy space in the memory, so you must specify the number of allocations, e.g., 90 for the array Y. <br>You need constant expressions for these numbers. For ex., the following definition is valid:
+  		<br>
+<pre class="prettyprint" >
+<code>
+#define b 3
+const int mySize = 2;
+int y[a*b+2];
+ </code></pre>
+  		</li>
+	<li>We can use its elements like variables, such as:
+		<br>
+<pre class="prettyprint" >
+<code>
+float A[10];
+A[3] = 2;               /* assign 2 to the third element of the array A      */
+A[4] = A[3] * 2;        /* get the value of the third element of the array A, 
+                           multiply it by 2, then assign the result into the 
+                           fourth element of the array A                     */
+A[3]++;                 /* increment the value of the third element by 1     */
+ </code></pre>
+		</li>
+	<li>The index of the first element of the array is zero, i.e., arrays begin with 0<sup>th</sup> element. And the index of the last element is N-1, where N is the size of the array.</li>
+	<li>Indices can only be either an integer or an integer expression.
+		<br>
+<pre class="prettyprint" >
+<code>
+int k[5], i;
+for (i = 0; i &lt; 5; i++)
+   k[i] = i * 2;
+k[2*2 - 1] = 3;
+k[k[4] / k[1]] = 2;
+k[1.5] = 3; 		/* error occurs */
+ </code></pre></li>
+ 	
+ 	<li>Elements of the array can be considered as variables, however array name is not a variable. Suppose we define <b>double NewArray[5];</b>, we have variables <b>NewArray[0]</b>, <b>NewArray[1]</b>, etc. But there is no variable with the name of NewArray.</li>
+ 	<li>Do not try to access the elements extending the size of an array. Suppose you define an array as <b>int k[5];</b>, then you should not try to access <b>k[-45]</b>, <b>k[-1]</b>, <b>k[5]</b>, <b>k[22]</b>, etc. Note that that is permitted, but you may have some problems if these are not allocated memory cells.</li>
+</ul> 				
+
+<p>It is also possible to initialize arrays at the declarations, give the values of elements in a comma separated list.</p>
+<pre class="prettyprint" >
+<code>
+int n[4] = {1,2,3,4};
+int n[4] = {1,2,3,4,5};         /* too many values (greater than the size of 
+                                   the array), it gives compile time error   */
+int n[4] = {2,3};               /* fewer initializers, remaining elements are 
+                                   initialized by zero                       */
+int n[] = {1,2,5,3,7,7,0};      /* it works, the compiler will create an array
+                                   whose size equals to the number of the 
+                                   initializers, in this case with size 7    */
+int n[];                        /* it gives compile time error*/	
+ </code></pre>
+ 
+ <p>Arrays are static structures, which means you set the size of the array in your code and cannot change its size anymore. In summary you should either specify the array size or initialize the array.</p>
+
+<br>
+<p><b>Example:</b> Suppose you have 100 elements with integer data type. You want to control whether these numbers are symmetric or not. <br>Consider elements are given in a sequence by the user. </p>				
+				
+<!-- Third Example -->	
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){			
+
+
+	return 0;
+}
+ </code></pre>		
+<div
+	class="softdev4u-openExampleDiv" 
+	data-softdev4u-exampleName="PS-Week11-Example3-Symmetric" 
+	data-softdev4u-linkTitle="press to open example Symmetric" 
+	data-softdev4u-filePath="src/Symmetric.c" 
+	data-softdev4u-lineNumber=1
+	data-softdev4u-language="C">
+</div> 
+<br>
+ 		
+<p><b>Example:</b> User enters a sequence of characters. You want to count the lowercase and the uppercase letters in this sequence. The sequence is finished when % is entered. You should ignore all other characters.</p>				
+				
+<!-- Forth Example -->	
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){			
+
+
+	return 0;
+}
+ </code></pre>		
+<div
+	class="softdev4u-openExampleDiv" 
+	data-softdev4u-exampleName="PS-Week11-Example4-Counter" 
+	data-softdev4u-linkTitle="press to open example Counter" 
+	data-softdev4u-filePath="src/Counter.c" 
+	data-softdev4u-lineNumber=1
+	data-softdev4u-language="C">
+</div> 
+<br>
+<p><b>Arrays have one important drawback:</b> They cannot be created or used dynamically. 
+	<br>- For example, consider the user enters a sequence of decimal numbers but we do not know the size of this sequence at the beginning of the program (suppose size is also given by the user or the numbers are taken until the user enters a sentinel value). 
+	<br>- We can solve this problem by defining very large arrays and hope the user not to enter the size such that it extends the limit. Suppose the following examples: </p>
+
+<!-- Fifth Example -->	
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){			
+
+
+	return 0;
+}
+ </code></pre>		
+<div
+	class="softdev4u-openExampleDiv" 
+	data-softdev4u-exampleName="PS-Week11-Example5-ArraySize" 
+	data-softdev4u-linkTitle="press to open example Array Size Limit" 
+	data-softdev4u-filePath="src/ArraySize.c" 
+	data-softdev4u-lineNumber=1
+	data-softdev4u-language="C">
+</div> 
+<br>
+<p>- If user enters the size smaller than or equal to 100000, the above code works. If he enters the size 100500, the indices exceeds the ranges, so you may have some problems. 
+	<br>- Now suppose the user enters 5 as the size of the array, then 99995 locations are allocated unnecessarily. 
+	<br>- Not that defining arrays with very large sizes is inefficient. So we need dynamic structures. 
+	<br>- For dynamic arrays, please refer to <b>Advanced C Topics -> relationship between arrays and pointers dynamic memory allocation with <span style="text-decoration: underline;">malloc</span>, <span style="text-decoration: underline;">calloc</span>, and <span style="text-decoration: underline;">realloc</span>.</b> </p>
+
+ 
+<p><b>Example:</b> Suppose you want to write a program that takes two polynomials from the user. Perform addition and multiplication operations on them:</p>
+				
+<!-- Sixth Example -->	
+<pre class="prettyprint" >
+<code>
+#include &lt;stdio.h&gt;
+
+int main(){			
+
+
+	return 0;
+}
+ </code></pre>		
+<div
+	class="softdev4u-openExampleDiv" 
+	data-softdev4u-exampleName="PS-Week11-Example6-Polynomial" 
+	data-softdev4u-linkTitle="Press to open example Polynomial" 
+	data-softdev4u-filePath="src/Polynomial.c" 
+	data-softdev4u-lineNumber=1
+	data-softdev4u-language="C">
+</div> 
+<br>
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>

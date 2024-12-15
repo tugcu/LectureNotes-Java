@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SoftDev4U</title>
+		<link href="../../sd4uBundle/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/bootstrap/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../sd4uBundle/css/softdev4u.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="../../sd4uBundle/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../sd4uBundle/js/softdev4u.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+			$(function () {
+				prettyPrint();
+				softdev4u_init();
+			});
+		</script>
+	</head>
+	<body onresize="softdev4u_resize()">
+		<div class="softdev4u-page">
+			<p class="softdev4u-title">
+			<!-- SOFTDEV4U PRETITLE -->
+				Debugging - Bocekten Arindirma
+			<!-- SOFTDEV4U POSTTITLE -->
+			</p>
+			<div class="softdev4u-pageContent">
+				
+				<!-- SOFTDEV4U PREPAGE -->
+				
+				<div>
+			
+					<ul>
+						<li> 
+							<b>What is debugging:</b>
+									When projects get bigger and bigger, it becomes much easier to make mistakes. Debugging is the process of finding out bugs in the code.
+						</li>
+						<li> 
+							<b>How to debug:</b>
+							<ul>
+								<li>
+									One and most famous way is to fill your code with System.out.println statements.
+								</li>
+								<li>
+									A better way is to use the debug tool in Eclipse. Debugging in Eclipse helps you find the causes or errors by allowing you to execute the code line by line and see what's stored in variables at any time. This is as if your code being executed in slow motion. 
+								</li>
+							</ul>
+						</li>
+						<li> 
+							<b>Debugging in Eclipse:</b> Now, let's say your code is buggy and you certainly need to debug your code. The first thing to do is to set breakpoints. As its name implies, breakpoints are where execution is stopped and debugging begins.
+							<ul>
+								<li>
+									<b>If you have an idea about the broken part in your code:</b> Go to this line and double click to the line number at the beginning of the line. You will see a blue dot, this is a breakpoint.
+								</li>
+								<li>
+									<b>If you do not have an idea about the broken part:</b> Go the first line to be executed in the whole program and double click to the line number at the beginning of the line. You will see a blue dot, this is a breakpoint.
+								</li>
+							</ul>
+							Then, find the bug in the icon bar (just next to run button) and click on. Accept if your are asked to switch perspective or not. The next thing you would see is something like this:
+							<br>
+							<img src="../images/debug.png" width="50%" height="50%"/>
+							<br>
+							In this window, you can see the state of your program:
+							<ul>
+								<li>
+									Stack:The flow of your program, or simply the methods called.
+								</li>
+								<li>
+									Variables and values stored in them 
+								</li>
+								<li>
+									The line that is currently being executed
+								</li>
+								<li>
+									Console outputs
+								</li>
+							</ul>
+						</li>
+						<li>
+							These are three most commonly used proceeding buttons:
+							<ul>
+								<li>
+									<b>Step Into(F5):</b>The current statement is executed. If it invokes some other methods, you would <i>step into</i> the execution of this method.
+								</li>
+								<li>
+									<b>Step Over(F6):</b>The current statement is executed and switched to the next statement in your code.
+								</li>
+								<li>
+									<b>Step Return(F7):</b>The current statement is executed until it returns something.
+								</li>
+								<li>
+									<b>Resume(F8):</b>Run the program until the next breakpoint.
+								</li>
+							</ul>
+						</li>
+						<li> 
+							<b>End of debugging:</b> Click on terminate button and switch to Java perspective.
+						</li>
+					</ul>			
+				</div>
+				
+				<!-- SOFTDEV4U POSTPAGE -->
+			</div>
+		</div>
+	</body>
+</html>
