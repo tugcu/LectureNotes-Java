@@ -13,6 +13,21 @@
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // Symbolic name for chapter. You will refer to the chapter with this symbolic name. Stick with the identifier name rules. (As a convention we will precede symbolic name with "C" for C language and with "J" for Java.)
+#Ch0-AboutCourse
+
+// This is the name of the folder that contains HTML files.
+Ch0-AboutCourse
+
+// The name that appears in ToC
+Ch0- About the Course
+// This is for the title slide
+-Ch0-title.html
+// These are references to topics (i.e., sections)
+*CourseDefinition
+#END
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// Symbolic name for chapter. You will refer to the chapter with this symbolic name. Stick with the identifier name rules. (As a convention we will precede symbolic name with "C" for C language and with "J" for Java.)
 #Ch1-Introduction
 
 // This is the name of the folder that contains HTML files.
@@ -175,3 +190,143 @@ Ch8- Trees
 #END
 
 
+//################################################################################
+//################################################################################
+//################################################################################
+
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// Symbolic name for chapter. You will refer to the chapter with this symbolic name. Stick with the identifier name rules. (As a convention we will precede symbolic name with "C" for C language and with "J" for Java.)
+#PS01
+
+// This is the name of the folder that contains HTML files.
+PS1
+// The name that appears in ToC
+PS1 - Introduction to PS's and Eclipse
+// This is for the title slide
+-PS-1-title.html
+// These are references to topics (i.e., sections)
+*PSandEclipseInfo
+#END
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// Symbolic name for chapter. You will refer to the chapter with this symbolic name. Stick with the identifier name rules. (As a convention we will precede symbolic name with "C" for C language and with "J" for Java.)
+#PS02
+
+// This is the name of the folder that contains HTML files.
+PS2
+// The name that appears in ToC
+PS2 - Documenting and Testing Your Code
+// This is for the title slide
+-PS2-title.html
+// These are references to topics (i.e., sections)
+*Javadoc
+*JUnit
+#END
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// Symbolic name for chapter. You will refer to the chapter with this symbolic name. Stick with the identifier name rules. (As a convention we will precede symbolic name with "C" for C language and with "J" for Java.)
+#PS03
+
+// This is the name of the folder that contains HTML files.
+PS3
+// The name that appears in ToC
+PS3 - Objects and Classes
+// This is for the title slide
+-PS3-title.html
+// These are references to topics (i.e., sections)
+*ObjectsAndClasses
+#END
+
+#PS04
+// This is the name of the folder that contains HTML files.
+PS4
+// The name that appears in ToC
+PS4 - OOP Concepts
+// This is for the title slide
+-PS4-title.html
+// These are references to topics (i.e., sections)
+*OOPConcepts
+#END
+
+
+// Symbolic name for chapter. You will refer to the chapter with this symbolic name. Stick with the identifier name rules. (As a convention we will precede symbolic name with "C" for C language and with "J" for Java.)
+#PS05
+// This is the name of the folder that contains HTML files.
+PS5
+// The name that appears in ToC
+PS5 - Special Methods and JFrame
+// This is for the title slide
+-PS5-title.html
+// These are references to topics (i.e., sections)
+*SpecialMethods
+*JFrameTutorial
+#END
+
+
+#PS07
+// This is the name of the folder that contains HTML files.
+PS7
+// The name that appears in ToC
+PS7 - Inheritence and Polymorphism
+// This is for the title slide
+-PS7-title.html
+// These are references to topics (i.e., sections)
+*InheritenceAndPolymorphism
+#END
+
+#PS08
+// This is the name of the folder that contains HTML files.
+PS8
+// The name that appears in ToC
+PS8 - ArrayList Implementation
+// This is for the title slide
+-PS8-title.html
+// These are references to topics (i.e., sections)
+*ArrayListImplementation
+#END
+
+#PS10
+// This is the name of the folder that contains HTML files.
+PS10
+// The name that appears in ToC
+PS10 - Dynamic LinkedList Implementation
+// This is for the title slide
+-PS10-title.html
+// These are references to topics (i.e., sections)
+*DynamicLinkedListImplementation
+#END
+
+#PS11
+// This is the name of the folder that contains HTML files.
+PS11
+// The name that appears in ToC
+PS11 - Simple Stack and Queue Examples
+// This is for the title slide
+-PS11-title.html
+// These are references to topics (i.e., sections)
+*SimpleStackAndQueueExamples
+#END
+
+#PS12
+// This is the name of the folder that contains HTML files.
+PS12
+// The name that appears in ToC
+PS12 - Binary Tree Implementation
+// This is for the title slide
+-PS12-title.html
+// These are references to topics (i.e., sections)
+*BinaryTreeImplementation
+#END
+
+
+//################################################################################
+//################################################################################
+//################################################################################
+
+
+#Exams
+Exams
+Exams
+-Exams.html
+#END
