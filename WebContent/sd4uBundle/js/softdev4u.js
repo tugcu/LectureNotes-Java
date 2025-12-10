@@ -161,41 +161,43 @@ function softdev4u_historyTimerStop() {
     clearInterval(softdev4u_historyTimer);
 }
 
+
+// Eveything in the following function (except for the function header was commented out by Tuna to disable the bottom navigation bar for web version
 function softdev4u_addFooterToMain() {
-	if (inDevelopmentMode) {
-		   $(".softdev4u-page").append(
-		            '<div class="softdev4u-footer">' +
-		                '<small class="softdev4u-copyright">&copy; 2015 SD4U</small>' +
-		                '<div class="softdev4u-navigation" style="width: 300px;">' +
-		                    '<div style="float:left; width: 150px; text-align: center;">' +
-		                        '<div style="float: left;"><a href="#" onclick="previousPage();"><span class="glyphicon glyphicon-chevron-left">&nbsp;&nbsp;</span></a></div>' +
-		                        '<div style="float: right;"><a href="#" onclick="nextPage();">&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a></div>' +
-		                        '<a href="#" onclick="softdev4u_openGoTo();" class="softdev4u-pageNumber"></a>' +
-		                    '</div>' +
-		                    '<div style="float:right; width: 100px;">' +
-		                        '<div style="float: left;" class="softdev4u-navigation-up" onmouseover="softdev4u_historyTimerStart();" onmouseout="softdev4u_historyTimerStop();"><a href="#" onclick="getOut();"><span class="glyphicon glyphicon-chevron-up"></span></a></div>' +
-		                        '<div class="softdev4u-toc-link"><a href="#" onclick="softdev4u_openTOC();">TOC</a></div>' +
-		                        '<div>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="resetMeta();">R</a></div>'+
-		                    '</div>' +
-		                '</div>' +
-		            '</div>');
-	} else {
-		$(".softdev4u-page").append(
-				'<div class="softdev4u-footer">' +
-                '<small class="softdev4u-copyright">&copy; 2015 SD4U</small>' +
-                '<div class="softdev4u-navigation" style="width: 300px;">' +
-                    '<div style="float:left; width: 150px; text-align: center;">' +
-                        '<div style="float: left;"><a href="#" onclick="previousPage();"><span class="glyphicon glyphicon-chevron-left">&nbsp;&nbsp;</span></a></div>' +
-                        '<div style="float: right;"><a href="#" onclick="nextPage();">&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a></div>' +
-                        '<a href="#" onclick="softdev4u_openGoTo();" class="softdev4u-pageNumber"></a>' +
-                    '</div>' +
-                    '<div style="float:right; width: 100px;">' +
-                        '<div style="float: left;" class="softdev4u-navigation-up" onmouseover="softdev4u_historyTimerStart();" onmouseout="softdev4u_historyTimerStop();"><a href="#" onclick="getOut();"><span class="glyphicon glyphicon-chevron-up"></span></a></div>' +
-                        '<div class="softdev4u-toc-link"><a href="#" onclick="softdev4u_openTOC();">TOC</a></div>' +
-                    '</div>' +
-                '</div>' +
-            '</div>');
-	}
+//	if (inDevelopmentMode) {
+//		   $(".softdev4u-page").append(
+//		            '<div class="softdev4u-footer">' +
+//		                '<small class="softdev4u-copyright">&copy; 2015 SD4U</small>' +
+//		                '<div class="softdev4u-navigation" style="width: 300px;">' +
+//		                    '<div style="float:left; width: 150px; text-align: center;">' +
+//		                        '<div style="float: left;"><a href="#" onclick="previousPage();"><span class="glyphicon glyphicon-chevron-left">&nbsp;&nbsp;</span></a></div>' +
+//		                        '<div style="float: right;"><a href="#" onclick="nextPage();">&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a></div>' +
+//		                        '<a href="#" onclick="softdev4u_openGoTo();" class="softdev4u-pageNumber"></a>' +
+//		                    '</div>' +
+//		                    '<div style="float:right; width: 100px;">' +
+//		                        '<div style="float: left;" class="softdev4u-navigation-up" onmouseover="softdev4u_historyTimerStart();" onmouseout="softdev4u_historyTimerStop();"><a href="#" onclick="getOut();"><span class="glyphicon glyphicon-chevron-up"></span></a></div>' +
+//		                        '<div class="softdev4u-toc-link"><a href="#" onclick="softdev4u_openTOC();">TOC</a></div>' +
+//		                        '<div>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="resetMeta();">R</a></div>'+
+//		                    '</div>' +
+//		                '</div>' +
+//		            '</div>');
+//	} else {
+//		$(".softdev4u-page").append(
+//				'<div class="softdev4u-footer">' +
+//                '<small class="softdev4u-copyright">&copy; 2015 SD4U</small>' +
+//                '<div class="softdev4u-navigation" style="width: 300px;">' +
+//                    '<div style="float:left; width: 150px; text-align: center;">' +
+//                        '<div style="float: left;"><a href="#" onclick="previousPage();"><span class="glyphicon glyphicon-chevron-left">&nbsp;&nbsp;</span></a></div>' +
+//                        '<div style="float: right;"><a href="#" onclick="nextPage();">&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a></div>' +
+//                        '<a href="#" onclick="softdev4u_openGoTo();" class="softdev4u-pageNumber"></a>' +
+//                    '</div>' +
+//                    '<div style="float:right; width: 100px;">' +
+//                        '<div style="float: left;" class="softdev4u-navigation-up" onmouseover="softdev4u_historyTimerStart();" onmouseout="softdev4u_historyTimerStop();"><a href="#" onclick="getOut();"><span class="glyphicon glyphicon-chevron-up"></span></a></div>' +
+//                        '<div class="softdev4u-toc-link"><a href="#" onclick="softdev4u_openTOC();">TOC</a></div>' +
+//                    '</div>' +
+//                '</div>' +
+//            '</div>');
+//	}
 
 }
 
